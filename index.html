@@ -8,6 +8,53 @@
     <title>Movie Tickets</title>
   </head>
   <body>
+    <h1></h1>
 
+    <div class="container">
+      <form id="user-input">
+        <h3>Choose your movie</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="movies" value="Blindspotting">
+            Blindspotting
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="movies" value="Black Panther">
+            Black Panther
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="movies" value="Jurassic World">
+            Jurassic World
+          </label>
+        </div>
+
+        <h3>Choose your time</h3>
+        <select class="form-control" id="time">
+          <option value="1">1:00</option>
+          <option value="3">3:00</option>
+          <option value="5">5:00</option>
+          <option value="7">7:00</option>
+        </select>
+
+        <div class="form-group">
+          <h3>Your Age</h3>
+          <input type="range" min="0" max="100"class="form-control-range" id="age-range" oninput="showAge()">
+          <h3 id="age-output">50</h3>
+        </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class="card" style="width: 18rem;" id="ticket">
+          <div class="card-body">
+            <h5 class="card-title"><span class="movie-name"></span></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><span class="movie-time"></span>:00 PM</h6>
+            <h6 class="card-subtitle mb-2 text-muted">$<span class="movie-price"></span>.00</h6>
+          </div>
+        </div>
+    </div>
   </body>
 </html>
